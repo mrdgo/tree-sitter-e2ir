@@ -39,7 +39,7 @@ There are several options - I did it like so:
 ```sh
 mkdir /usr/share/nvim/runtime/queries/e2ir
 wget https://raw.githubusercontent.com/mrdgo/tree-sitter-e2ir/main/highlights.scm
-mv highlights /usr/share/nvim/runtime/queries/e2ir
+mv highlights.scm /usr/share/nvim/runtime/queries/e2ir
 ```
 
 Now, if you open a `.ir` file, it should be highlighted.
