@@ -37,9 +37,9 @@ You need to add this file to your neovim's runtimepath.
 There are several options - I did it like so:
 
 ```sh
-wget {this repo}/highlights.scm
 mkdir /usr/share/nvim/runtime/queries/e2ir
-ln /opt/dots/roles/nvim/files/nvim/syntax/e2ir/queries/highlights.scm {this repo}/highlights.scm
+wget https://raw.githubusercontent.com/mrdgo/tree-sitter-e2ir/main/highlights.scm
+mv highlights /usr/share/nvim/runtime/queries/e2ir
 ```
 
 Now, if you open a `.ir` file, it should be highlighted.
