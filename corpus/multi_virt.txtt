@@ -1,0 +1,36 @@
+===
+Multiple virtual registers in one line
+===
+
+.func main: int
+    .virt %v0 %v1 %v2 %v3: int
+    .code
+    ret p
+
+---
+(source_file
+    (function_declaration
+        (identifier)
+        (type_name
+            (primitive_type_name)
+        )
+        (virtual_register_declaration
+            (identifier)
+            (identifier)
+            (identifier)
+            (identifier)
+            (type_name
+                (primitive_type_name)
+            )
+        )
+        (instruction
+            (ret
+                (operand
+                    (variable_operand
+                        (identifier)
+                    )
+                )
+            )
+        )
+    )
+)
