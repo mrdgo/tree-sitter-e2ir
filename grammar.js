@@ -63,7 +63,8 @@ module.exports = grammar({
 
         primitive_type_name: _ => choice(
             "int",
-            "real"
+            "real",
+            "bool"
         ),
 
         instruction: $ => choice(
@@ -78,7 +79,7 @@ module.exports = grammar({
             $.load,
             $.store,
             $.cast,
-            $.label,
+            $.label_instr,
         ),
 
         nop: _ => "nop",
@@ -173,6 +174,7 @@ module.exports = grammar({
         ),
 
         label: _ => /L[0-9]+/,
+        label_instr: _ => /L[0-9]+:/,
 
         operand: $ => choice(
             $.variable_operand,
@@ -182,7 +184,7 @@ module.exports = grammar({
 
         variable_operand: $ => $.identifier,
 
-        identifier: _ => /[a-zA-Z_%]+[a-zA-Z0-9_%$]*/,
+        identifier: _ => /[a-zA-Z_%]+[a-zA-Z0-9_%\$]*/,
 
         integer_constant: _ => /\$\-?[0-9]+/,
 

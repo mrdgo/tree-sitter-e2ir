@@ -173,7 +173,7 @@
           "named": true
         },
         {
-          "type": "label",
+          "type": "label_instr",
           "named": true
         },
         {
@@ -516,6 +516,10 @@
     "named": true
   },
   {
+    "type": "bool",
+    "named": false
+  },
+  {
     "type": "call",
     "named": false
   },
@@ -573,6 +577,10 @@
   },
   {
     "type": "label",
+    "named": true
+  },
+  {
+    "type": "label_instr",
     "named": true
   },
   {
